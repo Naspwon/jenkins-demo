@@ -35,7 +35,7 @@ pipeline{
         stage('Deploy to Heroku'){
             steps{
                 withCredentials([usernameColonPassword(credentialsId: 'd5bbd3e7-e7e1-4c78-b704-4b7d51276e9a', variable: 'HEROKU_CREDENTIALS')]){
-                    sh 'git push https://${HEROKU_CREDENTIALS}@https://git.heroku.com/jenkin-demo.git main'
+                    sh 'git push https://${HEROKU_CREDENTIALS}@git.heroku.com/jenkin-demo.git main'
                 }
             }
         }
