@@ -11,10 +11,10 @@ pipeline{
         }
         stage("Clone Repo"){
             steps{
-                git{
+                git(
                     url: "https://github.com/Naspwon/jenkins-demo.git",
                     branch: "main"
-                }
+                )
             }
         }
         stage("Install dependencies"){
