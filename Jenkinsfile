@@ -12,7 +12,7 @@ pipeline{
         stage("Clone Repo"){
             steps{
                 git{
-                    url: 'https://github.com/Naspwon/jenkins-demo',
+                    url: 'https://github.com/Naspwon/jenkins-demo.git',
                     branch: 'main'
                 }
             }
@@ -22,7 +22,7 @@ pipeline{
                 sh 'npm install'
             }
         }
-        stage("Running tests"){
+        stage("Running test"){
             steps{
                 echo "Running Tests"
             }
